@@ -12,7 +12,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html,
-  body {
+  body,
+  #root {
     height: 100%;
   }
 
@@ -61,5 +62,10 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     font-family: Roboto, sans-serif;
     font-size: 16px;
+  }
+
+  #root{
+    display: flex;
+    flex-direction: column;
   }
 `;
