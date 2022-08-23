@@ -57,4 +57,9 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     list-style: none;
   }
+ 
+  :root {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+  }
 `;
