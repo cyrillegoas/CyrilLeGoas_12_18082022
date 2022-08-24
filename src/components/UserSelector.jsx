@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { StyledMain } from './styles/StyledMain';
 import { UserCard } from './UserCard';
 
-const StyledMain = styled.main`
-  flex-grow: 1;
+const UserSelectorMain = styled(StyledMain)`
   display: grid;
   place-content: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
 
   & ul {
     display: flex;
@@ -34,7 +33,7 @@ const StyledMain = styled.main`
 export function UserSelector() {
   const ids = [12, 18, 99];
   return (
-    <StyledMain>
+    <UserSelectorMain>
       <ul>
         {ids.map((id) => (
           <li key={id}>
@@ -44,6 +43,6 @@ export function UserSelector() {
           </li>
         ))}
       </ul>
-    </StyledMain>
+    </UserSelectorMain>
   );
 }
