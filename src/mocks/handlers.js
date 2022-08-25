@@ -304,6 +304,21 @@ const user18Handlers = [
   ),
 ];
 
+const user77Handlers = [
+  rest.get('http://localhost:3000/user/77', (req, res, ctx) =>
+    res(ctx.text('not a json'))
+  ),
+  rest.get('http://localhost:3000/user/77/activity', (req, res, ctx) =>
+    res(ctx.text('not a json'))
+  ),
+  rest.get('http://localhost:3000/user/77/average-sessions', (req, res, ctx) =>
+    res(ctx.text('not a json'))
+  ),
+  rest.get('http://localhost:3000/user/77/performance', (req, res, ctx) =>
+    res(ctx.text('not a json'))
+  ),
+];
+
 const user88Handlers = [
   rest.get('http://localhost:3000/user/88', (req, res, ctx) =>
     res.networkError('Failed to connect')
@@ -357,6 +372,7 @@ const user99Handlers = [
 export const handlers = [
   ...user12Handlers,
   ...user18Handlers,
+  ...user77Handlers,
   ...user88Handlers,
   ...user99Handlers,
 ];

@@ -31,7 +31,7 @@ const UserSelectorMain = styled(StyledMain)`
 `;
 
 export function UserSelector() {
-  const ids = [12, 18, 88, 99];
+  const ids = [12, 18, 77, 88, 99];
   return (
     <UserSelectorMain>
       <ul>
