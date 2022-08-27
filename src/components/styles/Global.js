@@ -65,7 +65,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #root{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
   }
 `;
