@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import { useGetUserData } from '../hooks/useGetUserData';
 
 const StyledSection = styled.section`
+  align-self: flex-start;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
     'header header header header'
     'activity activity activity intake'
@@ -39,6 +40,7 @@ const Header = styled.div`
 const Activity = styled.div`
   background-color: rebeccapurple;
   grid-area: activity;
+  aspect-ratio: 832/320;
 `;
 const Goals = styled.div`
   background-color: goldenrod;
