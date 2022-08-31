@@ -17,7 +17,6 @@ const StyledSection = styled.section`
 `;
 
 const Header = styled.div`
-  background-color: palegreen;
   grid-area: header;
 
   & h1 {
@@ -37,29 +36,37 @@ const Header = styled.div`
   }
 `;
 
-const Activity = styled.div`
-  background-color: rebeccapurple;
+const StyledContainer = styled.div`
+  background-color: #fbfbfb;
+  border-radius: 5px;
+`;
+
+const Styled1x1 = styled(StyledContainer)`
+  aspect-ratio: 1/1;
+`;
+
+const Activity = styled(StyledContainer)`
   grid-area: activity;
   aspect-ratio: 832/320;
 `;
-const Goals = styled.div`
-  background-color: goldenrod;
-  grid-area: goals;
-  aspect-ratio: 1/1;
-`;
-const Radar = styled.div`
-  background-color: tomato;
-  grid-area: radar;
-  aspect-ratio: 1/1;
-`;
-const Kpi = styled.div`
-  background-color: hotpink;
-  grid-area: kpi;
-  aspect-ratio: 1/1;
-`;
-const Intake = styled.div`
-  background-color: forestgreen;
+
+const Intake = styled(StyledContainer)`
   grid-area: intake;
+  background-color: transparent;
+`;
+
+const Goals = styled(Styled1x1)`
+  background-color: #ff0000;
+  grid-area: goals;
+`;
+
+const Radar = styled(Styled1x1)`
+  background-color: #282d30;
+  grid-area: radar;
+`;
+
+const Kpi = styled(Styled1x1)`
+  grid-area: kpi;
 `;
 
 export function DashboardCharts() {
