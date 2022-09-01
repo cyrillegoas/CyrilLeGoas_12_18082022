@@ -19,9 +19,23 @@ export class UserData {
   }
 
   getperf({ data, kind }) {
-    this.perf = data.map((item) => ({
+    const unorderedData = data.map((item) => ({
       value: item.value,
       type: kind[item.kind],
     }));
+
+    const findByType = (type) =>
+      unorderedData.find((item) => item.type === type);
+
+    const orderedData = [
+      'intensity',
+      'speed',
+      'strength',
+      'endurance',
+      'energy',
+      'cardio',
+    ];
+
+    this.perf = orderedData.map((type) => findByType(type));
   }
 }
