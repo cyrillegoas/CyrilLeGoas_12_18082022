@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { useGetUserData } from '../hooks/useGetUserData';
+import { DailyIntake } from './DailyIntake';
 
 const StyledSection = styled.section`
   align-self: flex-start;
@@ -88,7 +89,9 @@ export function DashboardCharts() {
           <Goals />
           <Radar />
           <Kpi />
-          <Intake />
+          <Intake>
+            <DailyIntake macro={user.dailyIntake} />
+          </Intake>
         </>
       )}
     </StyledSection>
