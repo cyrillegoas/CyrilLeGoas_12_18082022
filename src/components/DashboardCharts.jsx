@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { useGetUserData } from '../hooks/useGetUserData';
 import { DailyIntake } from './DailyIntake';
+import { PerfRadar } from './PerfRadar';
 
 const StyledSection = styled.section`
   align-self: flex-start;
@@ -87,7 +88,9 @@ export function DashboardCharts() {
           </Header>
           <Activity />
           <Goals />
-          <Radar />
+          <Radar>
+            <PerfRadar perf={user.perf} />
+          </Radar>
           <Kpi />
           <Intake>
             <DailyIntake macro={user.dailyIntake} />
