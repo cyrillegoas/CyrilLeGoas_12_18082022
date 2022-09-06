@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { useGetUserData } from '../hooks/useGetUserData';
 import { DailyIntake } from './DailyIntake';
 import { PerfRadar } from './PerfRadar';
+import { KpiChart } from './KpiChart';
 
 const StyledSection = styled.section`
   align-self: flex-start;
@@ -91,7 +92,9 @@ export function DashboardCharts() {
           <Radar>
             <PerfRadar perf={user.perf} />
           </Radar>
-          <Kpi />
+          <Kpi>
+            <KpiChart kpi={user.kpi} />
+          </Kpi>
           <Intake>
             <DailyIntake macro={user.dailyIntake} />
           </Intake>
