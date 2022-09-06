@@ -76,31 +76,31 @@ const user12Handlers = [
           sessions: [
             {
               day: 1,
-              sessionLength: 30,
+              sessionLength: 10,
             },
             {
               day: 2,
-              sessionLength: 31,
+              sessionLength: 20,
             },
             {
               day: 3,
-              sessionLength: 32,
+              sessionLength: 20,
             },
             {
               day: 4,
-              sessionLength: 33,
+              sessionLength: 60,
             },
             {
               day: 5,
-              sessionLength: 34,
+              sessionLength: 50,
             },
             {
               day: 6,
-              sessionLength: 35,
+              sessionLength: 10,
             },
             {
               day: 7,
-              sessionLength: 36,
+              sessionLength: 40,
             },
           ],
         },
