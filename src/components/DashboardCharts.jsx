@@ -20,7 +20,7 @@ const StyledSection = styled.section`
   padding: 4.25rem 1.625rem 5.375rem;
 `;
 
-const Header = styled.div`
+const StyledHeader = styled.header`
   grid-area: header;
 
   & h1 {
@@ -40,7 +40,7 @@ const Header = styled.div`
   }
 `;
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.section`
   background-color: #fbfbfb;
   border-radius: 5px;
 `;
@@ -82,12 +82,12 @@ export function DashboardCharts() {
       {status === 'error' && <h1>Error</h1>}
       {status === 'ok' && (
         <>
-          <Header>
+          <StyledHeader>
             <h1>
               Bonjour <span>{user.infos.firstName}</span>
             </h1>
             <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
-          </Header>
+          </StyledHeader>
           <Activity />
           <Goals>
             <SessionsChart sessions={user.sessions} />
