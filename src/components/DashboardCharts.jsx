@@ -6,6 +6,7 @@ import { DailyIntake } from './DailyIntake';
 import { PerfRadar } from './PerfRadar';
 import { KpiChart } from './KpiChart';
 import { SessionsChart } from './SessionsChart';
+import { ActivityChart } from './ActivityChart';
 
 const StyledSection = styled.section`
   align-self: flex-start;
@@ -88,7 +89,9 @@ export function DashboardCharts() {
             </h1>
             <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
           </StyledHeader>
-          <Activity />
+          <Activity>
+            <ActivityChart />
+          </Activity>
           <Goals>
             <SessionsChart sessions={user.sessions} />
           </Goals>
