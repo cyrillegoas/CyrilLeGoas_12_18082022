@@ -5,6 +5,7 @@ import { useGetUserData } from '../hooks/useGetUserData';
 import { DailyIntake } from './DailyIntake';
 import { PerfRadar } from './PerfRadar';
 import { KpiChart } from './KpiChart';
+import { SessionsChart } from './SessionsChart';
 
 const StyledSection = styled.section`
   align-self: flex-start;
@@ -88,7 +89,9 @@ export function DashboardCharts() {
             <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
           </Header>
           <Activity />
-          <Goals />
+          <Goals>
+            <SessionsChart sessions={user.sessions} />
+          </Goals>
           <Radar>
             <PerfRadar perf={user.perf} />
           </Radar>
