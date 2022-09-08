@@ -90,7 +90,7 @@ export function DashboardCharts() {
             <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
           </StyledHeader>
           <Activity>
-            <ActivityChart />
+            <ActivityChart activity={user.activity} />
           </Activity>
           <Goals>
             <SessionsChart sessions={user.sessions} />
