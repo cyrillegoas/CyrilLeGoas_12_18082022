@@ -19,7 +19,7 @@ export function ActivityChartHeader() {
   return (
     <StyledHeader>
       <StyledH2>Activité quotidienne</StyledH2>
-      <ActivityChartLegend color="#979797">Poids (kg)</ActivityChartLegend>
+      <ActivityChartLegend color="#282D30">Poids (kg)</ActivityChartLegend>
       <ActivityChartLegend color="#E60000">
         Calories brûlées (kCal)
       </ActivityChartLegend>
