@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const StyledNav = styled.nav`
   color: ${({ theme }) => theme.nav.color};
   font-size: 1.5rem;
-  font-weight: 500;
   width: 100%;
   & > ul {
     display: flex;

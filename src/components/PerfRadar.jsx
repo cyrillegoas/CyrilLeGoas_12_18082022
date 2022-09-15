@@ -20,7 +20,6 @@ const StyledResponsiveContainer = styled(ResponsiveContainer)`
   & .recharts-polar-angle-axis text {
     fill: white;
     font-size: 0.75rem;
-    font-weight: 500;
   }
 `;
 

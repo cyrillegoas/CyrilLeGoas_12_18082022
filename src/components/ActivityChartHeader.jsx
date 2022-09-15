@@ -8,9 +8,8 @@ const StyledHeader = styled.header`
 `;
 
 const StyledH2 = styled.h2`
-  color: #20253a;
+  color: #3a2620;
   font-size: 0.9375rem;
-  font-weight: 500;
   line-height: 1.5rem;
   margin-right: auto;
 `;

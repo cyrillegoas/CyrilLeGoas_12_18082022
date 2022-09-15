@@ -36,7 +36,6 @@ const StyledHeader = styled.header`
 
   & h1 {
     font-size: 3rem;
-    font-weight: 500;
     line-height: 0.5;
     margin-bottom: 2.5rem;
 

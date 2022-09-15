@@ -35,7 +35,6 @@ const StyledTooltip = styled.div`
   & p {
     font-size: 0.4375rem;
     line-height: 1.5rem;
-    font-weight: 500;
     color: white;
   }
 `;

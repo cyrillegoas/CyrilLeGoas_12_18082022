@@ -17,7 +17,6 @@ const Dot = styled.div`
 const StyledText = styled.span`
   font-size: 0.875rem;
   color: #74798c;
-  font-weight: 500;
 `;
 
 export function ActivityChartLegend({ color, children }) {

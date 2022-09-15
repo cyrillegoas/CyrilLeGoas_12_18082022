@@ -14,7 +14,6 @@ const StyledSection = styled.section`
   &::after {
     content: 'Copyright, SportSee 2020';
     font-size: 0.75rem;
-    font-weight: 500;
     color: ${({ theme }) => theme.dashboardSidebar.copyrightColor};
     width: max-content;
     transform: rotate(270deg);

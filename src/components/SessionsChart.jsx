@@ -18,7 +18,6 @@ const StyledSessionWrapper = styled.div`
 const StyledTitle = styled.h2`
   font-size: 0.9375rem;
   color: hsla(0, 0%, 100%, 0.5);
-  font-weight: 500;
   top: 2rem;
   left: 2rem;
   position: absolute;
@@ -29,7 +28,6 @@ const StyledTooltip = styled.div`
   padding: 0.5rem;
   & p {
     font-size: 0.5rem;
-    font-weight: 500;
   }
 `;
 

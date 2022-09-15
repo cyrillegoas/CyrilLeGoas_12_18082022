@@ -13,7 +13,6 @@ const StyledKpiWrapper = styled.div`
 
   & h2 {
     font-size: 0.9375rem;
-    font-weight: 500;
     color: #20253a;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -47,7 +46,6 @@ const StyledLegendValue = styled.span`
 const StyledLegendText = styled.span`
   color: #74798c;
   font-size: 1rem;
-  font-weight: 500;
   text-align: center;
 `;
 
@@ -61,7 +59,6 @@ const StyledTitle = styled.div`
   & h2 {
     color: #20253a;
     font-size: 0.9375rem;
-    font-weight: 500;
     line-height: 1.6;
   }
 `;

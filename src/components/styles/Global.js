@@ -62,11 +62,17 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     font-family: Roboto, sans-serif;
     font-size: 16px;
+    font-weight: 500;
   }
 
   #root{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
+  }
+
+  h1,
+  h2 {
+    font-weight: 500;
   }
 `;
