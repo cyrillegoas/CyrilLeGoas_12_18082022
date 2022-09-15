@@ -23,6 +23,8 @@ const StyledKpiWrapper = styled.div`
 const StyledResponsiveContainer = styled(ResponsiveContainer)`
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  min-height: 0;
+  min-width: 0;
 `;
 
 const StyledLegend = styled.div`

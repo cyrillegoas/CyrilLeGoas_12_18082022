@@ -9,16 +9,26 @@ import { SessionsChart } from './SessionsChart';
 import { ActivityChart } from './ActivityChart';
 
 const StyledSection = styled.section`
-  align-self: flex-start;
+  flex-grow: 1;
+  padding: 4.25rem 1.625rem;
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(4, calc(25% - (3 * 1.875rem) / 4));
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
     'header header header header'
     'activity activity activity intake'
     'goals radar kpi intake';
   gap: 1.875rem;
-  padding: 4.25rem 1.625rem 5.375rem;
+
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 1126 / 779;
 `;
 
 const StyledHeader = styled.header`
@@ -44,6 +54,8 @@ const StyledHeader = styled.header`
 const StyledContainer = styled.section`
   background-color: #fbfbfb;
   border-radius: 5px;
+  min-width: 0;
+  min-height: 0;
 `;
 
 const Styled1x1 = styled(StyledContainer)`
@@ -52,7 +64,6 @@ const Styled1x1 = styled(StyledContainer)`
 
 const Activity = styled(StyledContainer)`
   grid-area: activity;
-  aspect-ratio: 832/320;
 `;
 
 const Intake = styled(StyledContainer)`
@@ -82,7 +93,7 @@ export function DashboardCharts() {
       {status === 'loading' && <h1>Loading</h1>}
       {status === 'error' && <h1>Error</h1>}
       {status === 'ok' && (
-        <>
+        <StyledGrid>
           <StyledHeader>
             <h1>
               Bonjour <span>{user.infos.firstName}</span>
@@ -104,7 +115,7 @@ export function DashboardCharts() {
           <Intake>
             <DailyIntake macro={user.dailyIntake} />
           </Intake>
-        </>
+        </StyledGrid>
       )}
     </StyledSection>
   );

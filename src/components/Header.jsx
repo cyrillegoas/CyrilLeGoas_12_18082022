@@ -4,14 +4,8 @@ import { HorizontalNav } from './HorizontalNav';
 
 const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.header.bgColor};
-  padding: 1.125rem 5.75rem 0.75rem 1.75rem;
-  & .wrapper {
-    display: flex;
-    align-items: center;
-  }
-`;
-
-const StyledWrapper = styled.div`
+  height: 5.625rem; // TODO need a variable
+  padding: 0 5.75rem 0 1.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,10 +18,8 @@ const StyledWrapper = styled.div`
 export function Header() {
   return (
     <StyledHeader>
-      <StyledWrapper>
-        <img src="/images/sportsee_logo.svg" alt="sportsee logo" />
-        <HorizontalNav />
-      </StyledWrapper>
+      <img src="/images/sportsee_logo.svg" alt="sportsee logo" />
+      <HorizontalNav />
     </StyledHeader>
   );
 }

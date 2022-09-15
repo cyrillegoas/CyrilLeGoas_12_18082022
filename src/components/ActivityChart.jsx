@@ -20,6 +20,11 @@ const StyledActivityWrapper = styled.div`
   gap: 3rem;
 `;
 
+const StyledResponsiveContainer = styled(ResponsiveContainer)`
+  min-height: 0;
+  min-width: 0;
+`;
+
 const StyledTooltip = styled.div`
   background-color: #e60000;
   padding: 0.25rem 0.75rem;
@@ -71,7 +76,7 @@ export function ActivityChart({ activity }) {
   return (
     <StyledActivityWrapper>
       <ActivityChartHeader />
-      <ResponsiveContainer width="100%" height="100%">
+      <StyledResponsiveContainer width="100%" height="100%">
         <BarChart
           data={activityData}
           margin={{
@@ -128,7 +133,7 @@ export function ActivityChart({ activity }) {
             hide
           />
         </BarChart>
-      </ResponsiveContainer>
+      </StyledResponsiveContainer>
     </StyledActivityWrapper>
   );
 }
