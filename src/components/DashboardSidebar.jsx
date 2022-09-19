@@ -11,6 +11,10 @@ const StyledSection = styled.section`
   position: relative;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
 
+  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+    padding: 0.8125rem;
+  }
+
   &::after {
     content: 'Copyright, SportSee 2020';
     font-size: 0.75rem;
@@ -21,6 +25,10 @@ const StyledSection = styled.section`
     position: absolute;
     bottom: 0;
     left: 50%;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+      font-size: 0.375rem;
+    }
   }
 `;
 
