@@ -20,6 +20,10 @@ const StyledResponsiveContainer = styled(ResponsiveContainer)`
   & .recharts-polar-angle-axis text {
     fill: ${({ theme }) => theme.colors.white};
     font-size: 0.75rem;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoint.xxl}) {
+      font-size: 0.5rem;
+    }
   }
 `;
 
