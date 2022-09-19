@@ -56,7 +56,8 @@ const StyledValue = styled.span`
   margin-bottom: 0.125rem;
   color: ${({ theme }) => theme.colors.secondary};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+  @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl}) or 
+  (max-height: 1024px)) {
     font-size: 0.75rem;
   }
 `;
@@ -65,7 +66,8 @@ const StyledType = styled.span`
   font-size: 0.875rem;
   color: ${({ theme }) => theme.colors.grey};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+  @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl}) or 
+  (max-height: 1024px)) {
     font-size: 0.525rem;
   }
 `;

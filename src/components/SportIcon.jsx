@@ -10,7 +10,8 @@ const StyledWrapper = styled.div`
   border-radius: 6px;
   background-color: ${({ theme }) => theme.colors.white};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+  @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl}) or 
+  (max-height: 1024px)) {
     width: 2rem;
     height: 2rem;
 

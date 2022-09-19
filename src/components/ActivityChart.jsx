@@ -19,7 +19,8 @@ const StyledActivityWrapper = styled.div`
   flex-direction: column;
   gap: 3rem;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+  @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl}) or 
+  (max-height: 1024px)) {
     gap: 0.5rem;
   }
 `;

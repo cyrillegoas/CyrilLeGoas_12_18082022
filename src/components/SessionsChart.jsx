@@ -22,7 +22,8 @@ const StyledTitle = styled.h2`
   left: 2rem;
   position: absolute;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+  @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl}) or 
+  (max-height: 1024px)) {
     top: 1rem;
     left: 1rem;
     font-size: 0.7rem;

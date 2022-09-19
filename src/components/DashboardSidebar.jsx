@@ -11,7 +11,8 @@ const StyledSection = styled.section`
   position: relative;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+  @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl}) or 
+  (max-height: 1024px)) {
     padding: 0.8125rem;
   }
 
@@ -26,7 +27,8 @@ const StyledSection = styled.section`
     bottom: 0;
     left: 50%;
 
-    @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+    @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl}) or
+    (max-height: 1024px)) {
       font-size: 0.375rem;
     }
   }

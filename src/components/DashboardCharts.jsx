@@ -48,7 +48,8 @@ const StyledHeader = styled.header`
     line-height: 1.5;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+  @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl}) or 
+  (max-height: 1024px)) {
     & h1 {
       font-size: 2rem;
       margin-bottom: 1.5rem;

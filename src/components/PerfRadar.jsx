@@ -21,7 +21,8 @@ const StyledResponsiveContainer = styled(ResponsiveContainer)`
     fill: ${({ theme }) => theme.colors.white};
     font-size: 0.75rem;
 
-    @media screen and (max-width: ${({ theme }) => theme.breakpoint.xxl}) {
+    @media screen and ((max-width: ${({ theme }) => theme.breakpoint.xxl}) or 
+    (max-height: 1024px)) {
       font-size: 0.5rem;
     }
   }
