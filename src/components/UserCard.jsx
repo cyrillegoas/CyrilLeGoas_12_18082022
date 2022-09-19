@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledFigure = styled.figure`
-  background-color: ${({ theme }) => theme.userCard.bgColor};
+  background-color: ${({ theme }) => theme.colors.blueTransparent};
   width: 200px;
   height: fit-content;
   padding: 1rem;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { HorizontalNav } from './HorizontalNav';
 
 const StyledHeader = styled.header`
-  background-color: ${({ theme }) => theme.header.bgColor};
+  background-color: ${({ theme }) => theme.colors.blackish};
   height: 5.625rem; // TODO need a variable
   padding: 0 5.75rem 0 1.75rem;
   display: flex;

@@ -8,7 +8,7 @@ const StyledWrapper = styled.div`
   display: grid;
   place-content: center;
   border-radius: 6px;
-  background-color: ${({ theme }) => theme.sportIcon.bgColor};
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export function SportIcon({ imagePath }) {

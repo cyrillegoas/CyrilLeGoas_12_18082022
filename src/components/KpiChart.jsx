@@ -10,13 +10,6 @@ const StyledKpiWrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   place-items: center;
-
-  & h2 {
-    font-size: 0.9375rem;
-    color: #20253a;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
 `;
 
 const StyledResponsiveContainer = styled(ResponsiveContainer)`
@@ -27,7 +20,7 @@ const StyledResponsiveContainer = styled(ResponsiveContainer)`
 `;
 
 const StyledLegend = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   width: 60%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -38,13 +31,13 @@ const StyledLegend = styled.div`
 `;
 
 const StyledLegendValue = styled.span`
-  color: #282d30;
+  color: ${({ theme }) => theme.colors.secondary};
   font-size: 1.625rem;
   font-weight: bold;
 `;
 
 const StyledLegendText = styled.span`
-  color: #74798c;
+  color: ${({ theme }) => theme.colors.grey};
   font-size: 1rem;
   text-align: center;
 `;
@@ -57,7 +50,7 @@ const StyledTitle = styled.div`
   padding: 1.5rem 1.875rem;
 
   & h2 {
-    color: #20253a;
+    color: ${({ theme }) => theme.colors.darklue};
     font-size: 0.9375rem;
     line-height: 1.6;
   }
@@ -65,7 +58,11 @@ const StyledTitle = styled.div`
 
 export function KpiChart({ kpi }) {
   const kpiData = [
-    { value: kpi, fill: '#FF0000', stroke: 'transparent' },
+    {
+      value: kpi,
+      fill: '#FF0101',
+      stroke: 'transparent',
+    },
     { value: 1 - kpi, fill: 'transparent', stroke: 'transparent' },
   ];
   return (

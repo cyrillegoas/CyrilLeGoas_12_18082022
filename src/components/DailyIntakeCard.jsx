@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledCard = styled.div`
-  background-color: #fbfbfb;
+  background-color: ${({ theme }) => theme.colors.greyLight};
   width: 100%;
   aspect-ratio: 258 / 128;
   display: flex;
@@ -18,7 +18,7 @@ const StyledIconWrapper = styled.div`
 `;
 
 const StyledIconContainer = styled.div`
-  background-color: hsla(0, 100%, 50%, 6.61%);
+  background-color: ${({ theme }) => theme.colors.redTransparent};
   border-radius: 6px;
   height: 100%;
   aspect-ratio: 1/1;
@@ -27,16 +27,16 @@ const StyledIconContainer = styled.div`
   align-items: center;
 
   &.calorie {
-    background-color: hsla(0, 100%, 50%, 6.61%);
+    background-color: ${({ theme }) => theme.colors.redTransparent};
   }
   &.protein {
-    background-color: hsla(203, 100%, 64.5%, 6.61%);
+    background-color: ${({ theme }) => theme.colors.blueTransparent};
   }
   &.lipid {
-    background-color: hsl(343, 97.7%, 65.5%, 6.61%);
+    background-color: ${({ theme }) => theme.colors.pinkTransparent};
   }
   &.carbohydrate {
-    background-color: hsl(48, 94.7%, 55.7%, 6.61%);
+    background-color: ${({ theme }) => theme.colors.yellowTransparent};
   }
 `;
 
@@ -54,11 +54,12 @@ const StyledValue = styled.span`
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.125rem;
+  color: ${({ theme }) => theme.colors.secondary};
 `;
 
 const StyledType = styled.span`
   font-size: 0.875rem;
-  color: #74798c;
+  color: ${({ theme }) => theme.colors.grey};
 `;
 
 export function DailyIntakeCard({ value, type }) {

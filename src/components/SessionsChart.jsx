@@ -24,7 +24,7 @@ const StyledTitle = styled.h2`
 `;
 
 const StyledTooltip = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   padding: 0.5rem;
   & p {
     font-size: 0.5rem;

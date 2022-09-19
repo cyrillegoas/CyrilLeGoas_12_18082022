@@ -17,7 +17,6 @@ const StyledSection = styled.section`
 
 const StyledGrid = styled.div`
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(4, calc(25% - (3 * 1.875rem) / 4));
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
@@ -40,7 +39,7 @@ const StyledHeader = styled.header`
     margin-bottom: 2.5rem;
 
     & span {
-      color: #ff0101;
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 
@@ -51,7 +50,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledContainer = styled.section`
-  background-color: #fbfbfb;
+  background-color: ${({ theme }) => theme.colors.greyLight};
   border-radius: 5px;
   min-width: 0;
   min-height: 0;
@@ -71,12 +70,12 @@ const Intake = styled(StyledContainer)`
 `;
 
 const Goals = styled(Styled1x1)`
-  background-color: #ff0000;
+  background-color: ${({ theme }) => theme.colors.primary};
   grid-area: goals;
 `;
 
 const Radar = styled(Styled1x1)`
-  background-color: #282d30;
+  background-color: ${({ theme }) => theme.colors.secondary};
   grid-area: radar;
 `;
 

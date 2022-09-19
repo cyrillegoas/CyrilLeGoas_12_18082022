@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-  color: ${({ theme }) => theme.nav.color};
+  color: ${({ theme }) => theme.colors.white};
   font-size: 1.5rem;
   width: 100%;
   & > ul {

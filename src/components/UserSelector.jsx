@@ -16,7 +16,7 @@ const UserSelectorMain = styled(StyledMain)`
   }
 
   & a {
-    color: black;
+    color: ${({ theme }) => theme.colors.black};
     text-decoration: none;
   }
 

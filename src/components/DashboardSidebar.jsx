@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { SportIcon } from './SportIcon';
 
 const StyledSection = styled.section`
-  background-color: ${({ theme }) => theme.dashboardSidebar.bgColor};
+  background-color: ${({ theme }) => theme.colors.blackish};
   padding: 1.625rem;
   display: grid;
   place-content: center;
@@ -14,7 +14,7 @@ const StyledSection = styled.section`
   &::after {
     content: 'Copyright, SportSee 2020';
     font-size: 0.75rem;
-    color: ${({ theme }) => theme.dashboardSidebar.copyrightColor};
+    color: ${({ theme }) => theme.colors.white};
     width: max-content;
     transform: rotate(270deg);
     transform-origin: 0 50%;

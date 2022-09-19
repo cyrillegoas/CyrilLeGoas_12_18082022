@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledH2 = styled.h2`
-  color: #3a2620;
+  color: ${({ theme }) => theme.colors.darkBlue};
   font-size: 0.9375rem;
   line-height: 1.5rem;
   margin-right: auto;
@@ -18,8 +18,10 @@ export function ActivityChartHeader() {
   return (
     <StyledHeader>
       <StyledH2>Activité quotidienne</StyledH2>
-      <ActivityChartLegend color="#282D30">Poids (kg)</ActivityChartLegend>
-      <ActivityChartLegend color="#E60000">
+      <ActivityChartLegend color={({ theme }) => theme.colors.secondary}>
+        Poids (kg)
+      </ActivityChartLegend>
+      <ActivityChartLegend color={({ theme }) => theme.colors.primaryDarker}>
         Calories brûlées (kCal)
       </ActivityChartLegend>
     </StyledHeader>

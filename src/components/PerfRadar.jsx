@@ -14,11 +14,11 @@ const StyledResponsiveContainer = styled(ResponsiveContainer)`
     stroke: transparent;
   }
   & .recharts-polar-grid-concentric path {
-    stroke: white;
+    stroke: ${({ theme }) => theme.colors.white};
     stroke-width: 2;
   }
   & .recharts-polar-angle-axis text {
-    fill: white;
+    fill: ${({ theme }) => theme.colors.white};
     font-size: 0.75rem;
   }
 `;

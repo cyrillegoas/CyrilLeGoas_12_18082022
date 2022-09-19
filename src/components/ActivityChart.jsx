@@ -26,7 +26,7 @@ const StyledResponsiveContainer = styled(ResponsiveContainer)`
 `;
 
 const StyledTooltip = styled.div`
-  background-color: #e60000;
+  background-color: ${({ theme }) => theme.colors.primaryDarker};
   padding: 0.25rem 0.75rem;
   display: flex;
   align-items: center;
@@ -93,7 +93,7 @@ export function ActivityChart({ activity }) {
           <Bar
             yAxisId="kilogram"
             dataKey="kilogram"
-            fill="#282D30"
+            fill="#283028"
             barSize={7}
             radius={[50, 50, 0, 0]}
           />
