@@ -21,6 +21,12 @@ const StyledTitle = styled.h2`
   top: 2rem;
   left: 2rem;
   position: absolute;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.7rem;
+  }
 `;
 
 const StyledTooltip = styled.div`
