@@ -47,6 +47,17 @@ const StyledHeader = styled.header`
     font-size: 1.125rem;
     line-height: 1.5;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+    & h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    & > span {
+      font-size: 0.75rem;
+    }
+  }
 `;
 
 const StyledContainer = styled.section`
