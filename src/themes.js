@@ -1,3 +1,10 @@
+const breakpoints = {
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px',
+};
+
 export const Theme = {
   default: {
     colors: {
@@ -15,5 +22,6 @@ export const Theme = {
       pinkTransparent: 'hsl(343, 97.7%, 65.5%, 6.61%)',
       yellowTransparent: 'hsl(48, 94.7%, 55.7%, 6.61%)',
     },
+    breakpoint: { ...breakpoints },
   },
 };
