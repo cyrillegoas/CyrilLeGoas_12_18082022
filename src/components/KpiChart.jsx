@@ -34,12 +34,18 @@ const StyledLegendValue = styled.span`
   color: ${({ theme }) => theme.colors.secondary};
   font-size: 1.625rem;
   font-weight: bold;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+    font-size: 1.2rem;
+  }
 `;
 
 const StyledLegendText = styled.span`
   color: ${({ theme }) => theme.colors.grey};
   font-size: 1rem;
   text-align: center;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+    font-size: 0.75rem;
+  }
 `;
 
 const StyledTitle = styled.div`
@@ -49,10 +55,18 @@ const StyledTitle = styled.div`
   grid-row: 1 / 2;
   padding: 1.5rem 1.875rem;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+    padding: 0.75rem 0.9375rem;
+  }
+
   & h2 {
     color: ${({ theme }) => theme.colors.darklue};
     font-size: 0.9375rem;
     line-height: 1.6;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoint.xl}) {
+      font-size: 0.7rem;
+    }
   }
 `;
 
