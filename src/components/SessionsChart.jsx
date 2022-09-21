@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   LineChart,
@@ -49,6 +50,20 @@ function CustomTooltip({ active, payload }) {
   return null;
 }
 
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number,
+    })
+  ),
+};
+
+CustomTooltip.defaultProps = {
+  active: false,
+  payload: [],
+};
+
 function CustomCursor({ height, width, top, bottom, payloadIndex, points }) {
   const dayWidth = width / 6;
   const cursorStart = points[0].x;
@@ -69,6 +84,20 @@ function CustomCursor({ height, width, top, bottom, payloadIndex, points }) {
     />
   );
 }
+
+CustomCursor.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number,
+  top: PropTypes.number,
+  bottom: PropTypes.number,
+  payloadIndex: PropTypes.number,
+  points: PropTypes.arrayOf(
+    PropTypes.shape({
+      x: PropTypes.number,
+      y: PropTypes.number,
+    })
+  ),
+};
 
 export function SessionsChart({ sessions }) {
   const weekDays = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
@@ -117,3 +146,12 @@ export function SessionsChart({ sessions }) {
     </StyledSessionWrapper>
   );
 }
+
+SessionsChart.propTypes = {
+  sessions: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.number,
+      sessionLengthday: PropTypes.number,
+    })
+  ).isRequired,
+};

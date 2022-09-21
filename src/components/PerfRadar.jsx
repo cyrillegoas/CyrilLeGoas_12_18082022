@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   Radar,
@@ -50,3 +51,12 @@ export function PerfRadar({ perf }) {
     </StyledResponsiveContainer>
   );
 }
+
+PerfRadar.propTypes = {
+  perf: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string,
+      value: PropTypes.number,
+    })
+  ).isRequired,
+};

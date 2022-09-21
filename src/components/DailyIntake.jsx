@@ -22,5 +22,10 @@ export function DailyIntake({ macro }) {
 }
 
 DailyIntake.propTypes = {
-  macro: PropTypes.object.isRequired,
+  macro: PropTypes.shape({
+    calorie: PropTypes.number,
+    protein: PropTypes.number,
+    lipid: PropTypes.number,
+    carbohydrate: PropTypes.number,
+  }).isRequired,
 };

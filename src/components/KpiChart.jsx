@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
@@ -116,3 +117,7 @@ export function KpiChart({ kpi }) {
     </StyledKpiWrapper>
   );
 }
+
+KpiChart.propTypes = {
+  kpi: PropTypes.number.isRequired,
+};

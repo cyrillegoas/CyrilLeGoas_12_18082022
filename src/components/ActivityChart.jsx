@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   BarChart,
@@ -55,6 +56,20 @@ function CustomTooltip({ active, payload }) {
   }
   return null;
 }
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number,
+    })
+  ),
+};
+
+CustomTooltip.defaultProps = {
+  active: false,
+  payload: [],
+};
 
 export function ActivityChart({ activity }) {
   const activityData = activity.map((item, index) => ({
@@ -141,3 +156,13 @@ export function ActivityChart({ activity }) {
     </StyledActivityWrapper>
   );
 }
+
+ActivityChart.propTypes = {
+  activity: PropTypes.arrayOf(
+    PropTypes.shape({
+      kilogram: PropTypes.number,
+      calories: PropTypes.number,
+      day: PropTypes.string,
+    })
+  ).isRequired,
+};
