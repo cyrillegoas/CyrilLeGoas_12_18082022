@@ -1,3 +1,4 @@
+/** @module UserCard */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -22,6 +23,18 @@ const StyledFigure = styled.figure`
   }
 `;
 
+/**
+ * @typedef userCardProps
+ * @type {Object}
+ * @property {Number} userId - user id
+ */
+
+/**
+ * Returns a card with the given user id
+ *
+ * @param {userCardProps} - props
+ * @returns {React.ReactElement|null}
+ */
 export function UserCard({ userId }) {
   return (
     <StyledFigure>

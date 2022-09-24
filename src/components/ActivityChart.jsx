@@ -1,3 +1,4 @@
+/** @module ActivityChart */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -45,6 +46,19 @@ const StyledTooltip = styled.div`
   }
 `;
 
+/**
+ * @typedef tooltipProps
+ * @type {Object}
+ * @property {Boolean} active - cursor active flag
+ * @property {Array} payload - chart data
+ */
+
+/**
+ * Returns the tooltip displayed when hovering the chart or null if not active.
+ *
+ * @param {tooltipProps} - props passed by recharts
+ * @returns {React.ReactElement|null}
+ */
 function CustomTooltip({ active, payload }) {
   if (active && payload) {
     return (
@@ -71,6 +85,26 @@ CustomTooltip.defaultProps = {
   payload: [],
 };
 
+/**
+ * @typedef dailyActivity
+ * @type {Object}
+ * @property {String} day - date
+ * @property {Number} kilogram - daily weight
+ * @property {Number} calories - daily calories burned
+ */
+
+/**
+ * @typedef activityProps
+ * @type {Object}
+ * @property {Array<{dailyActivity}>} activity - user daily weight and calories burned
+ */
+
+/**
+ * Returns a bar chart of the user daily activity
+ *
+ * @param {activityProps} - props passed
+ * @returns {React.ReactElement}
+ */
 export function ActivityChart({ activity }) {
   const activityData = activity.map((item, index) => ({
     tickName: index + 1,

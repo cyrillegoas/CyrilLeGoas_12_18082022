@@ -1,3 +1,4 @@
+/** @module DailyIntake */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -10,6 +11,21 @@ const StyledContainer = styled.div`
   justify-content: space-between;
 `;
 
+/**
+ * @typedef dailyIntakeProps
+ * @type {Object}
+ * @property {Number} calorie - daily calorie intake in kCal
+ * @property {Number} protein - daily protein intake in g
+ * @property {Number} lipid - daily lipid intake in g
+ * @property {Number} carbohydrate - daily carbohydrate intake in g
+ */
+
+/**
+ * Returns a card for each type of macro
+ *
+ * @param {dailyIntakeProps} - props
+ * @returns {React.ReactElement}
+ */
 export function DailyIntake({ macro }) {
   return (
     <StyledContainer>

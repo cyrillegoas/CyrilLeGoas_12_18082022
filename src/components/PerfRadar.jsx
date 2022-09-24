@@ -1,3 +1,4 @@
+/** @module PerfRadar */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -29,6 +30,25 @@ const StyledResponsiveContainer = styled(ResponsiveContainer)`
   }
 `;
 
+/**
+ * @typedef perf
+ * @type {Object}
+ * @property {Number} value - performance score
+ * @property {String} type - performance type
+ */
+
+/**
+ * @typedef perfProps
+ * @type {Object}
+ * @property {Array<{perf}>} perf - user performance over different categories
+ */
+
+/**
+ * Returns a radar chart of the user performance
+ *
+ * @param {perfProps} - props
+ * @returns {React.ReactElement}
+ */
 export function PerfRadar({ perf }) {
   const radarData = perf.map((item) => ({
     type: item.type,

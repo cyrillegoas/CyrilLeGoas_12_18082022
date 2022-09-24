@@ -1,4 +1,10 @@
+/**
+ * Format user data
+ */
 export class UserData {
+  /**
+   * @param {Object[]} data - array of user data
+   */
   constructor([userInfos, activity, sessions, performance]) {
     this.infos = {
       id: userInfos.data.id,
@@ -18,6 +24,11 @@ export class UserData {
     this.getperf(performance.data);
   }
 
+  /**
+   * Get user performances and sort it
+   * @param  {Object.<string, string>} kind - type of performance
+   * @param  {Object[]} data - user performance
+   */
   getperf({ data, kind }) {
     const unorderedData = data.map((item) => ({
       value: item.value,

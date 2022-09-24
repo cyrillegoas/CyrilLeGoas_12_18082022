@@ -1,3 +1,4 @@
+/** @module SportIcon */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -21,6 +22,18 @@ const StyledWrapper = styled.div`
   }
 `;
 
+/**
+ * @typedef sportIconProps
+ * @type {Object}
+ * @property {String} imagePath - path to the icon
+ */
+
+/**
+ * Returns a styled icon
+ *
+ * @param {sportIconProps} - props
+ * @returns {React.ReactElement}
+ */
 export function SportIcon({ imagePath }) {
   return (
     <StyledWrapper>

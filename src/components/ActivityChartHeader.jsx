@@ -1,3 +1,4 @@
+/** @module ActivityChartHeader */
 import React from 'react';
 import styled from 'styled-components';
 import { ActivityChartLegend } from './ActivityChartLegend';
@@ -14,6 +15,11 @@ const StyledH2 = styled.h2`
   margin-right: auto;
 `;
 
+/**
+ * Returns the header displayed above the activity chart
+ *
+ * @returns {React.ReactElement}
+ */
 export function ActivityChartHeader() {
   return (
     <StyledHeader>

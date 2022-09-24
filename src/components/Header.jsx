@@ -1,3 +1,4 @@
+/** @module Header */
 import React from 'react';
 import styled from 'styled-components';
 import { HorizontalNav } from './HorizontalNav';
@@ -15,6 +16,11 @@ const StyledHeader = styled.header`
   }
 `;
 
+/**
+ * Returns the page header (logo + nav)
+ *
+ * @returns {React.ReactElement}
+ */
 export function Header() {
   return (
     <StyledHeader>

@@ -1,3 +1,4 @@
+/** @module DashboardCharts */
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
@@ -95,6 +96,11 @@ const Kpi = styled(Styled1x1)`
   grid-area: kpi;
 `;
 
+/**
+ * Returns a grid of charts if the user data was correctly loaded (an error message otherwise)
+ *
+ * @returns {React.ReactElement}
+ */
 export function DashboardCharts() {
   const { userId } = useParams();
   const { user, status } = useGetUserData(userId);

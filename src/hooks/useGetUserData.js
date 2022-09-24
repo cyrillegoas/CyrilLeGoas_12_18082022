@@ -1,6 +1,21 @@
+/** @module useGetUserData */
 import { useEffect, useState } from 'react';
 import { UserData } from '../utils/userData';
 
+/**
+ * @typedef state
+ * @type {Object}
+ * @property {user|null} user - user data if available
+ * @property {String} status - fetch status (loading / error / ok)
+ */
+
+/**
+ * Fetch the user data and returns it if available
+ *
+ * @function
+ * @param {userID} - user id
+ * @returns {state}
+ */
 export const useGetUserData = (userID) => {
   const [state, setState] = useState({ user: null, status: 'loading' });
 

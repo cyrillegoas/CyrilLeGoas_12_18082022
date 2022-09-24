@@ -1,3 +1,4 @@
+/** @module UserSelector */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -30,6 +31,11 @@ const UserSelectorMain = styled(StyledMain)`
   }
 `;
 
+/**
+ * Returns a list of users and their cards
+ *
+ * @returns {React.ReactElement|null}
+ */
 export function UserSelector() {
   const ids = [12, 18, 77, 88, 99];
   return (

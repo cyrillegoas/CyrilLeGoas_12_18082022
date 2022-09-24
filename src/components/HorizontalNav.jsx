@@ -1,3 +1,4 @@
+/** @module HorizontalNav */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -11,6 +12,11 @@ const StyledNav = styled.nav`
   }
 `;
 
+/**
+ * Returns an horizontal nav for the different page of the app
+ *
+ * @returns {React.ReactElement}
+ */
 export function HorizontalNav() {
   const navItems = [
     {

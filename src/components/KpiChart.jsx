@@ -1,3 +1,4 @@
+/** @module KpiChart */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -77,6 +78,18 @@ const StyledTitle = styled.div`
   }
 `;
 
+/**
+ * @typedef kpiProps
+ * @type {Object}
+ * @property {Number} kpi - key performance indicator
+ */
+
+/**
+ * Returns a pie chart of the user goal progress
+ *
+ * @param {kpiProps} - props
+ * @returns {React.ReactElement}
+ */
 export function KpiChart({ kpi }) {
   const kpiData = [
     {

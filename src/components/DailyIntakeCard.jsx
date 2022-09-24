@@ -1,3 +1,4 @@
+/** @module DailyIntakeCard */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -72,6 +73,19 @@ const StyledType = styled.span`
   }
 `;
 
+/**
+ * @typedef intakeCardProps
+ * @type {Object}
+ * @property {Number} value - quantity of macro
+ * @property {String} type - type of macro
+ */
+
+/**
+ * Returns a macro card with icon / quantity / type
+ *
+ * @param {intakeCardProps} - props
+ * @returns {React.ReactElement}
+ */
 export function DailyIntakeCard({ value, type }) {
   let macroType = '';
   switch (type) {

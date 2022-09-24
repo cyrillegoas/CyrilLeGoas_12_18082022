@@ -1,3 +1,4 @@
+/** @module ActivityChartLegend */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -20,6 +21,19 @@ const StyledText = styled.span`
   color: ${({ theme }) => theme.colors.grey};
 `;
 
+/**
+ * @typedef legendProps
+ * @type {Object}
+ * @property {string} color - color hex value
+ * @property {React.ReactElement} children - childrens passed to the component
+ */
+
+/**
+ * Returns a legend and it's corresponding color
+ *
+ * @param {legendProps} - props
+ * @returns {React.ReactElement}
+ */
 export function ActivityChartLegend({ color, children }) {
   return (
     <StyledWrapper>

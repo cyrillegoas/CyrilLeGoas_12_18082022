@@ -1,3 +1,4 @@
+/** @module DashboardSidebar */
 import React from 'react';
 import styled from 'styled-components';
 import { SportIcon } from './SportIcon';
@@ -40,6 +41,11 @@ const StyledUl = styled.ul`
   gap: 1.25rem;
 `;
 
+/**
+ * Returns a sidenav element made up of a list of link
+ *
+ * @returns {React.ReactElement}
+ */
 export function DashboardSidebar() {
   return (
     <StyledSection>

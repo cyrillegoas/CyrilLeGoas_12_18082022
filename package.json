@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "mock": "vite dev --mode mocking",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "dependencies": {
+    "jsdoc": "^3.6.11",
     "msw": "^0.44.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

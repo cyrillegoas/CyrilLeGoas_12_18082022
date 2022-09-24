@@ -1,3 +1,4 @@
+/** @module SessionsChart */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -39,6 +40,19 @@ const StyledTooltip = styled.div`
   }
 `;
 
+/**
+ * @typedef tooltipProps
+ * @type {Object}
+ * @property {Boolean} active - cursor active flag
+ * @property {Array} payload - chart data
+ */
+
+/**
+ * Returns the tooltip displayed when hovering the chart or null if not active.
+ *
+ * @param {tooltipProps} - props passed by recharts
+ * @returns {React.ReactElement|null}
+ */
 function CustomTooltip({ active, payload }) {
   if (active && payload) {
     return (
@@ -64,6 +78,23 @@ CustomTooltip.defaultProps = {
   payload: [],
 };
 
+/**
+ * @typedef cursorProps
+ * @type {Object}
+ * @property {Number} height - height of the graph
+ * @property {Number} width - width of the graph
+ * @property {Number} top - height on top of the graph
+ * @property {Number} bottom - height at the bottom of the graph
+ * @property {Number} payloadIndex - index of the hovered point in the data array
+ * @property {Array} points - point coordinate
+ */
+
+/**
+ * Returns the cursor displayed when hovering the chart
+ *
+ * @param {cursorProps} - props passed by recharts
+ * @returns {React.ReactElement}
+ */
 function CustomCursor({ height, width, top, bottom, payloadIndex, points }) {
   const dayWidth = width / 6;
   const cursorStart = points[0].x;
@@ -99,6 +130,19 @@ CustomCursor.propTypes = {
   ),
 };
 
+/**
+ * @typedef sessionsProps
+ * @type {Object}
+ * @property {Number} day - day id
+ * @property {Number} sessionLength - user sessions duration in minutes
+ */
+
+/**
+ * Returns a line chart of the user daily sessions
+ *
+ * @param {sessionsProps} - props
+ * @returns {React.ReactElement}
+ */
 export function SessionsChart({ sessions }) {
   const weekDays = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
   const sessionsData = sessions.map((session, index) => ({
